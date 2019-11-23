@@ -620,6 +620,216 @@ footer.product-page {
   padding-top: 40px;
 }
 
+/* ---------------------------Products list------------------------- */
+
+section.products-list .container {
+  /* width: calc(100vw - 400px); */
+  max-width: 1550px;
+  width: 80%;
+}
+
+section.products-list li {
+  border: solid 1px rgba(0,0,0,0.15);
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 250px;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+}
+
+/* section.products-list li > div {
+  border: 1px dashed green;
+} */
+
+section.products-list li .list-img {
+  flex: 0 1 300px;
+  padding: 35px;
+}
+
+section.products-list li .list-desc {
+  flex: 1 1 500px;
+  padding: 65px 0;
+}
+
+section.products-list li .list-buy {
+  flex: 0 1 550px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 65px 0;
+}
+
+section.products-list li .list-buy .buy {
+  flex: 1;
+  text-align: center;
+  align-self: stretch;
+}
+
+section.products-list li .list-buy .buy h4 {
+  font-family: helvetica-light;
+  font-weight: lighter;
+  font-size: 24px;
+  line-height: 12px;
+}
+
+section.products-list li .list-buy .buy h4 span {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+section.products-list li .list-buy .buy button {
+  border: 0;
+  border-radius: 5px;
+  background-color: #F1F1F1;
+  font-family: helvetica-light;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  padding: 14px 0px 23px 0px;
+  width: 70%;
+  max-width: 180px;
+  margin-top: 50px;
+  transition: 0.5s;
+}
+
+section.products-list li .list-buy .buy button:hover {
+  transform: scale(1.1);
+}
+
+section.products-list li .list-buy .items-add {
+  flex: 1;
+  text-align: right;
+}
+
+section.products-list li .list-buy .items-add img {
+  width: 35px;
+  transition: 0.5s;
+}
+
+section.products-list li .list-buy .items-add a:last-child img {
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+section.products-list li .list-buy .items-add a:hover img {
+  transform: scale(1.3);
+}
+
+section.products-list li .list-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+section.products-list li .list-desc h1 {
+  font-family: helvetica-light;
+  font-weight: lighter;
+  font-size: 32px;
+  margin-bottom: 10px;
+  line-height: 35px;
+}
+
+section.products-list li .list-desc span {
+  font-family: helvetica-light;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 22px;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+@media (max-width:992px) {
+  section.products-list li .list-img {
+    flex: 0 0 250px;
+    padding: 55px;
+  }
+
+  section.products-list li .list-desc {
+    position: absolute;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    left: 220px;
+    max-width: 240px;
+  }
+
+  section.products-list li .list-desc span {
+    margin-top: 10px;
+  }
+
+  section.products-list li .list-buy {
+    padding-bottom: 28px;
+    padding-top: 97px;
+  }
+
+  section.products-list li .list-buy .buy h4 {
+    position: relative;
+    top: 20px;
+  }
+}
+
+@media (max-width:768px) {
+
+  section.products-list .container {
+    width: 87%;
+  }
+
+  section.products-list li {
+    height: 160px;
+  }
+
+  section.products-list li .list-img {
+    flex: 0 0 90px;
+    padding: 8px;
+  }
+
+  section.products-list li .list-desc {
+    padding-top: 0;
+    padding-bottom: 0;
+    left: 95px;
+  }
+
+  section.products-list li .list-desc h1 {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  section.products-list li .list-desc span {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  section.products-list li .list-buy .buy h4 {
+    font-size: 13px;
+    position: relative;
+    top: 35px;
+  }
+
+  section.products-list li .list-buy .items-add img {
+    width: 20px;
+  }
+
+  section.products-list li .list-buy .items-add a:last-child img {
+    margin-left: 15px;
+  }
+
+  section.products-list li .list-buy {
+    padding: 40px 0;
+  }
+
+  section.products-list li .list-buy .items-add {
+    position: relative;
+    top: 18px;
+    text-align: right;
+  }
+
+  section.products-list li .list-buy .buy button {
+    font-size: 13px;
+    padding: 5px 0px 10px 0px;
+  }
+}
+
+
 
 
 

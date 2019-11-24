@@ -19,15 +19,32 @@
           </div>
 
           <ul  class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="product-page.html">პროდუქტი</a></li>
+            <li class="nav-item"><a class="nav-link" href="products-list.html">პროდუქტი</a></li>
             <li class="nav-item"><a class="nav-link" href="#">კონტაქტი</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
     <section class="products-list">
       <div class="container">
-        <ul>
+        <div class="sorted">
+          <div class="dropdown">
+            <button type="button" class="show-hide">ყველა კატეგორია
+              <div class="arrow-down">
+                <div class="left-arrow"></div>
+                <div class="right-arrow"></div>
+              </div>
+            </button>
+            <ul class="show-hide-menu">
+              <li><a href="#">ციფრული ტექნიკა</a></li>
+              <li><a href="#">საყოფაცხოვრებო ტექნიკა</a></li>
+              <li><a href="#">წვრილი ტექნიკა</a></li>
+            </ul>
+          </div>
+          <p>დახარისხებული:  რეკომენდირებული</p>
+        </div>
+        <ul class="spec-products">
           <li>
             <div class="list-img">
               <img src="assets/images/list-sanati.png" alt="სანათი">
@@ -182,6 +199,15 @@
       menuIcon.addEventListener("click", () => {
         navbar.classList.toggle("change");
       })
+
+      const drpdwn = document.querySelector('.show-hide');
+      const drpdwnmenu = document.querySelector('.show-hide-menu');
+
+      drpdwn.addEventListener("click", () => {
+        drpdwnmenu.classList.toggle("change");
+      })
+
+
 
     </script>
   </body>

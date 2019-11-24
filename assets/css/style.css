@@ -622,13 +622,17 @@ footer.product-page {
 
 /* ---------------------------Products list------------------------- */
 
+section.products-list {
+  margin-top: 50px;
+}
+
 section.products-list .container {
   /* width: calc(100vw - 400px); */
   max-width: 1550px;
   width: 80%;
 }
 
-section.products-list li {
+section.products-list .spec-products li {
   border: solid 1px rgba(0,0,0,0.15);
   background-color: #ffffff;
   border-radius: 10px;
@@ -638,7 +642,7 @@ section.products-list li {
   display: flex;
 }
 
-section.products-list ul li:last-child {
+section.products-list ul.spec-products li:last-child {
   margin-bottom: 90px;
 }
 
@@ -743,6 +747,102 @@ section.products-list li .list-desc span {
   margin-top: 30px;
 }
 
+section.products-list .sorted {
+  padding-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.products-list .sorted p {
+  font-family: helvetica-light;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+section.products-list .dropdown {
+  position: relative;
+  padding-right: 50px;
+}
+
+section.products-list .dropdown button {
+  border-radius: 10px;
+  border: solid 1px #d9d9d9;
+  background-color: #ffffff;
+  color: #4d4d4d;
+  font-family: helvetica-light;
+  font-weight: lighter;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 40px 13px 0;
+  width: 212px;
+  position: relative;
+}
+
+section.products-list .dropdown .arrow-down {
+  width: 13px;
+  height: 10px;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  bottom: 0;
+  margin: auto
+}
+
+section.products-list .dropdown .arrow-down .left-arrow,
+section.products-list .dropdown .arrow-down .right-arrow {
+  width: 8px;
+  height: 2px;
+  background-color: #707070;
+  position: absolute;
+  bottom: 5px;
+}
+
+section.products-list .dropdown .arrow-down .left-arrow {
+  transform: rotate(-45deg);
+  right: 0;
+}
+
+section.products-list .dropdown .arrow-down .right-arrow  {
+  transform: rotate(45deg);
+}
+
+section.products-list .dropdown ul {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  position: absolute;
+  top: 65px;
+  z-index: 11;
+  padding: 15px 30px;
+  display: none
+}
+
+section.products-list .dropdown ul.change {
+  display: block;
+}
+
+section.products-list .dropdown ul li {
+  padding: 10px 0;
+}
+
+section.products-list .dropdown ul li a {
+  font-family: helvetica-light;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+section.products-list .container {
+  overflow: visible;
+}
+
+
+
+
+
+
+
 /* -----------------Navigation-------------- */
 
 .burger-menu {
@@ -787,8 +887,8 @@ section.products-list li .list-desc span {
   .navbar {
     position:fixed;
     top: 0;
-    right: -260px;
-    z-index: 2;
+    right: -280px;
+    z-index: 12;
     width: 260px;
     height: 100vh;
     background-color: #393939;
@@ -878,7 +978,7 @@ section.products-list li .list-desc span {
     width: 87%;
   }
 
-  section.products-list li {
+  section.products-list .spec-products li {
     height: 160px;
   }
 
@@ -936,6 +1036,25 @@ section.products-list li .list-desc span {
   footer .brand-logo {
     bottom: 0;
   }
+
+  section.products-list .dropdown button {
+    width: 165px;
+    font-size: 13px;
+    padding: 8px 20px 13px 0;
+  }
+
+  section.products-list .dropdown .arrow-down {
+    right: 13px;
+  }
+
+  section.products-list .dropdown ul li a {
+    font-size: 14px;
+  }
+
+  section.products-list .sorted p {
+    font-size: 13px;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -953,6 +1072,20 @@ section.products-list li .list-desc span {
   section.products-list li .list-buy {
     padding: 40px 0;
     margin: 0;
+  }
+
+  section.products-list .dropdown ul {
+    left: 0;
+    right:auto;
+  }
+
+  section.products-list .sorted {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+
+  section.products-list .sorted p {
+    margin-top: 15px;
   }
 }
 

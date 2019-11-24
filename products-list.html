@@ -12,10 +12,15 @@
         <div class="brand-logo">
           <a href="index.html"><img src="assets/images/logo-header1.png" alt="BANG&OLUFSEN Logo"></a>
         </div>
-        <nav>
-          <ul>
-            <li class="active"><a href="#">პროდუქტი</a></li>
-            <li><a href="#">კონტაქტი</a></li>
+        <nav class="navbar">
+          <div class="burger-menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+          </div>
+
+          <ul  class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="product-page.html">პროდუქტი</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">კონტაქტი</a></li>
           </ul>
         </nav>
       </div>
@@ -169,5 +174,15 @@
           <a href="#"><img src="assets/images/twitter.svg" alt="Twitter"></a>
       </div>
     </footer>
+    <script type="text/javascript">
+
+      const menuIcon = document.querySelector('.burger-menu');
+      const navbar = document.querySelector('.navbar');
+
+      menuIcon.addEventListener("click", () => {
+        navbar.classList.toggle("change");
+      })
+
+    </script>
   </body>
 </html>
